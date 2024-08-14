@@ -1,31 +1,27 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:tera/login_screen_producteur.dart';
 
 class Inscription extends StatefulWidget {
   Inscription({super.key});
-
-  static const IconData phone = IconData(0xe4a2, fontFamily: 'MaterialIcons');
-  static const IconData password =
-      IconData(0xe47a, fontFamily: 'MaterialIcons');
 
   @override
   State<Inscription> createState() => _InscriptionState();
 }
 
 class _InscriptionState extends State<Inscription> {
+  bool _isObscure1 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Center(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 82,
               ),
-              Text(
+              const Text(
                 "Inscription",
                 style: TextStyle(
                   fontSize: 32,
@@ -33,29 +29,28 @@ class _InscriptionState extends State<Inscription> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 34,
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   child: SizedBox(
                     height: 58.0,
                     width: 317,
                     child: TextField(
                       decoration: InputDecoration(
+                        labelText: 'Prénom',
                         filled: true,
-                        fillColor: Color.fromRGBO(
-                            224, 224, 224, 1), // Background color
-                        prefixIcon: Icon(
+                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                        prefixIcon: const Icon(
                           Icons.person,
                           size: 23,
-                        ), // Icon on the left
-                        hintText: 'Prénom', // Placeholder text
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
-                          borderSide: BorderSide(
-                            color: Colors.black, // Border color
+                          borderSide: const BorderSide(
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -65,24 +60,23 @@ class _InscriptionState extends State<Inscription> {
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: SizedBox(
                     height: 58.0,
                     width: 317,
                     child: TextField(
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Color.fromRGBO(
-                            224, 224, 224, 1), // Background color
-                        prefixIcon: Icon(
+                        labelText: "Nom",
+                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                        prefixIcon: const Icon(
                           Icons.person,
                           size: 23,
-                        ), // Icon on the left
-                        hintText: 'Nom', // Placeholder text
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
-                          borderSide: BorderSide(
-                            color: Colors.black, // Border color
+                          borderSide: const BorderSide(
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -92,25 +86,24 @@ class _InscriptionState extends State<Inscription> {
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: SizedBox(
                     height: 58.0,
                     width: 317,
                     child: TextField(
                       keyboardType: TextInputType.datetime,
                       decoration: InputDecoration(
+                        labelText: 'Numéro de téléphone',
                         filled: true,
-                        fillColor: Color.fromRGBO(
-                            224, 224, 224, 1), // Background color
-                        prefixIcon: Icon(
+                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                        prefixIcon: const Icon(
                           Icons.phone,
                           size: 23,
-                        ), // Icon on the left
-                        hintText: 'Numéro de téléphone', // Placeholder text
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
-                          borderSide: BorderSide(
-                            color: Colors.black, // Border color
+                          borderSide: const BorderSide(
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -120,24 +113,36 @@ class _InscriptionState extends State<Inscription> {
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: SizedBox(
                     height: 58.0,
                     width: 317,
                     child: TextField(
+                      obscureText: _isObscure1,
                       decoration: InputDecoration(
+                        labelText: 'Mot de passe',
                         filled: true,
-                        fillColor: Color.fromRGBO(
-                            224, 224, 224, 1), // Background color
-                        prefixIcon: Icon(
-                          Icons.password,
+                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                        prefixIcon: const Icon(
+                          Icons.key,
                           size: 23,
-                        ), // Icon on the left
-                        hintText: 'Mot de passe', // Placeholder text
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _isObscure1
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              _isObscure1 = !_isObscure1;
+                            });
+                          },
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
-                          borderSide: BorderSide(
-                            color: Colors.black, // Border color
+                          borderSide: const BorderSide(
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -147,24 +152,35 @@ class _InscriptionState extends State<Inscription> {
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: SizedBox(
                     height: 58.0,
                     width: 317,
                     child: TextField(
                       decoration: InputDecoration(
+                        labelText: 'Confirmer mot de passe',
                         filled: true,
-                        fillColor: Color.fromRGBO(
-                            224, 224, 224, 1), // Background color
-                        prefixIcon: Icon(
-                          Icons.password,
+                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                        prefixIcon: const Icon(
+                          Icons.key,
                           size: 23,
-                        ), // Icon on the left
-                        hintText: 'Confirmer mot de passe', // Placeholder text
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _isObscure1
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              _isObscure1 = !_isObscure1;
+                            });
+                          },
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
-                          borderSide: BorderSide(
-                            color: Colors.black, // Border color
+                          borderSide: const BorderSide(
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -174,32 +190,28 @@ class _InscriptionState extends State<Inscription> {
               ),
               TextButton(
                 onPressed: () => {},
-                child: Text(
+                child: const Text(
                   "S'inscrire",
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ),
-              // Container(),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
                     ElevatedButton(
-                      onPressed: () {
-                        // Handle the button press
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(247, 72, 29, 1),
-                        iconColor: Colors.orange, // Background color
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                        backgroundColor: const Color.fromRGBO(247, 72, 29, 1),
+                        iconColor: Colors.orange,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 40, vertical: 15),
                         shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(10), // Rounded corners
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "S'inscrire",
                         style: TextStyle(
                           fontSize: 18,
@@ -208,19 +220,34 @@ class _InscriptionState extends State<Inscription> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 50),
                     RichText(
                       text: TextSpan(
-                        text: "Vous avez un compte? ",
-                        style: TextStyle(color: Colors.black, fontSize: 16),
+                        text: "Vous avez un compte ? ",
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
                         children: [
                           TextSpan(
                             text: "Connectez vous!",
                             style: TextStyle(
-                              color: Color.fromRGBO(247, 72, 29, 1),
+                              decoration: TextDecoration.combine([
+                                TextDecoration.underline,
+                              ]),
+                              color: const Color.fromRGBO(247, 72, 29, 1),
                               fontWeight: FontWeight.bold,
                             ),
-                            recognizer: TapGestureRecognizer()..onTap = () {},
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const LoginScreen()),
+                                );
+                              },
                           ),
                         ],
                       ),
@@ -228,16 +255,14 @@ class _InscriptionState extends State<Inscription> {
                   ],
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  height: 20,
-                  color: Color.fromRGBO(247, 72, 29, 1),
-                ),
-              ),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Container(
+        color: Colors.orange[900],
+        height: 40,
+        width: double.infinity,
       ),
     );
   }
