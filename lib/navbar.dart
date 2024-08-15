@@ -42,9 +42,9 @@ class _navbarState extends State<navbar> {
       selectedIndex: widget.pageIndex,
       onDestinationSelected: _onSelected,
       destinations: [
-        _destination('assets/augmenter.png', '', 30),
-        _destination('assets/cacahuete.png', '', 30),
-        _destination('assets/decrease.png', '', 30),
+        _destination('assets/entrepot-icon.png', '', 30),
+        _destination("assets/home-icon.png", '', 30),
+        _destination('assets/shop-icon.png', '', 30),
       ],
     );
   }

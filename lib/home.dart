@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
                   color: orange,
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                  margin: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   height: 230,
                   width: 500,
@@ -80,21 +80,55 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Ibrahima DIA',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/user-icon.png',
+                                  width: 17,
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  'Ibrahima DIA',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
                             ),
-                            Text(
-                              '5 ventes',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
+                            SizedBox(
+                              height: 10,
                             ),
-                            Text(
-                              '350kg',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/vente-icon.png',
+                                  width: 17,
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  '5 ventes',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/poids-icon.png',
+                                  width: 17,
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  '350kg',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -102,35 +136,75 @@ class _HomeState extends State<Home> {
                           width: 20,
                         ),
                         Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 10),
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                           decoration: BoxDecoration(
                               color: jauneClair,
                               borderRadius: BorderRadius.circular(10)),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Keur Massar',
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              Text(
-                                '5km',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 15),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/place-icon.png',
+                                    width: 17,
+                                    color: Colors.black,
+                                  ),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    '5km',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                '30kg libre',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 15),
+                              SizedBox(
+                                height: 10,
                               ),
-                              Text(
-                                '5 item en stock',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 15),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/hangar-icon.png',
+                                    width: 17,
+                                    color: Colors.black,
+                                  ),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    '30kg libre',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/colis-ouvert.png',
+                                    width: 17,
+                                  ),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    '3 items en stock',
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 12),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -152,9 +226,21 @@ class _HomeState extends State<Home> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Item en stock',
-                    style: TextStyle(color: dark, fontWeight: FontWeight.bold),
+                  Row(
+                    children: [
+                      Image.asset('assets/colis-ouvert.png', width: 20),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Item en stock',
+                        style:
+                            TextStyle(color: dark, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Container(
                     padding: EdgeInsets.all(10),
@@ -181,10 +267,6 @@ class _HomeState extends State<Home> {
                         ),
                         SizedBox(
                           width: 15,
-                        ),
-                        Image.asset(
-                          'assets/patate.png',
-                          width: 30,
                         ),
                       ],
                     ),
