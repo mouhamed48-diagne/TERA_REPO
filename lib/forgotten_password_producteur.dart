@@ -17,6 +17,7 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -119,7 +120,7 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 127),
+                  padding: const EdgeInsets.only(top: 120),
                   child: ElevatedButton(
                     onPressed: () {
                       final userconfirm = _userconfirmController.text;
