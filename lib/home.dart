@@ -58,11 +58,86 @@ class _HomeState extends State<Home> {
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   height: 230,
+                  width: 500,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: dark,
                   ),
+                  child: Column(children: [
+                    SizedBox(
+                      height: 55,
+                    ),
+                    Text(
+                      'Entrepôt proche',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              'Ibrahima DIA',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15),
+                            ),
+                            Text(
+                              '5 ventes',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15),
+                            ),
+                            Text(
+                              '350kg',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 10),
+                          decoration: BoxDecoration(
+                              color: jauneClair,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Column(
+                            children: [
+                              Text(
+                                'Keur Massar',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                '5km',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 15),
+                              ),
+                              Text(
+                                '30kg libre',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 15),
+                              ),
+                              Text(
+                                '5 item en stock',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 15),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ]),
                 ),
                 Image(
                   image: AssetImage(
