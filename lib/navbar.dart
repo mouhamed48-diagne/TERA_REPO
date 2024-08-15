@@ -38,7 +38,7 @@ class _navbarState extends State<navbar> {
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
-      indicatorColor: Colors.white,
+      // indicatorColor: Colors.white,
       selectedIndex: widget.pageIndex,
       onDestinationSelected: _onSelected,
       destinations: [
