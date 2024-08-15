@@ -14,12 +14,12 @@ class _InscriptionState extends State<Inscription> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Center(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               const SizedBox(
-                height: 82,
+                height: 25,
               ),
               const Text(
                 "Inscription",
@@ -30,7 +30,7 @@ class _InscriptionState extends State<Inscription> {
                 ),
               ),
               const SizedBox(
-                height: 34,
+                height: 25,
               ),
               Center(
                 child: Padding(
@@ -111,77 +111,69 @@ class _InscriptionState extends State<Inscription> {
                   ),
                 ),
               ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: SizedBox(
-                    height: 58.0,
-                    width: 317,
-                    child: TextField(
-                      obscureText: _isObscure1,
-                      decoration: InputDecoration(
-                        labelText: 'Mot de passe',
-                        filled: true,
-                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
-                        prefixIcon: const Icon(
-                          Icons.key,
-                          size: 23,
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: SizedBox(
+                  height: 58.0,
+                  width: 317,
+                  child: TextField(
+                    obscureText: _isObscure1,
+                    decoration: InputDecoration(
+                      labelText: 'Mot de passe',
+                      filled: true,
+                      fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                      prefixIcon: const Icon(
+                        Icons.key,
+                        size: 23,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isObscure1 ? Icons.visibility : Icons.visibility_off,
                         ),
-                        suffixIcon: IconButton(
-                          icon: Icon(
-                            _isObscure1
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                          ),
-                          onPressed: () {
-                            setState(() {
-                              _isObscure1 = !_isObscure1;
-                            });
-                          },
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          borderSide: const BorderSide(
-                            color: Colors.black,
-                          ),
+                        onPressed: () {
+                          setState(() {
+                            _isObscure1 = !_isObscure1;
+                          });
+                        },
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: const BorderSide(
+                          color: Colors.black,
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: SizedBox(
-                    height: 58.0,
-                    width: 317,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Confirmer mot de passe',
-                        filled: true,
-                        fillColor: const Color.fromRGBO(224, 224, 224, 1),
-                        prefixIcon: const Icon(
-                          Icons.key,
-                          size: 23,
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: SizedBox(
+                  height: 58.0,
+                  width: 317,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Confirmer mot de passe',
+                      filled: true,
+                      fillColor: const Color.fromRGBO(224, 224, 224, 1),
+                      prefixIcon: const Icon(
+                        Icons.key,
+                        size: 23,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isObscure1 ? Icons.visibility : Icons.visibility_off,
                         ),
-                        suffixIcon: IconButton(
-                          icon: Icon(
-                            _isObscure1
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                          ),
-                          onPressed: () {
-                            setState(() {
-                              _isObscure1 = !_isObscure1;
-                            });
-                          },
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          borderSide: const BorderSide(
-                            color: Colors.black,
-                          ),
+                        onPressed: () {
+                          setState(() {
+                            _isObscure1 = !_isObscure1;
+                          });
+                        },
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: const BorderSide(
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -197,7 +189,7 @@ class _InscriptionState extends State<Inscription> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Column(
                   children: [
                     ElevatedButton(
@@ -220,7 +212,7 @@ class _InscriptionState extends State<Inscription> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 20),
                     RichText(
                       text: TextSpan(
                         text: "Vous avez un compte ? ",
