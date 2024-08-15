@@ -44,18 +44,15 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 20),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Renseignez votre numéro de téléphone',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12,
-                      color: Colors.black,
-                    ),
+                Text(
+                  'Renseignez votre numéro de téléphone',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                    color: Colors.black,
                   ),
                 ),
-                const SizedBox(height: 3),
+                const SizedBox(height: 10),
                 SizedBox(
                   width: 300,
                   height: 57.83,
@@ -102,7 +99,7 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 30),
                 SizedBox(
                   width: 300,
                   height: 57.83,
@@ -121,9 +118,8 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                     style: const TextStyle(color: Colors.black),
                   ),
                 ),
-                const SizedBox(height: 10.3),
                 Padding(
-                  padding: const EdgeInsets.only(top: 75),
+                  padding: const EdgeInsets.only(top: 127),
                   child: ElevatedButton(
                     onPressed: () {
                       final userconfirm = _userconfirmController.text;
