@@ -11,11 +11,37 @@ class entrepots extends StatefulWidget {
 class _entrepotsState extends State<entrepots> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: navbar(pageIndex: 0),
-        body: SingleChildScrollView(),
+    return Scaffold(
+      appBar: AppBar(
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () => Scaffold.of(context).openDrawer(),
+              icon: Icon(
+                Icons.menu,
+                size: 35,
+                color: Colors.black,
+              ),
+            );
+          },
+        ),
+        actions: [
+          Builder(
+            builder: (context) {
+              return IconButton(
+                onPressed: () => Scaffold.of(context).openEndDrawer(),
+                icon: Icon(
+                  Icons.notifications,
+                  size: 35,
+                  color: Colors.black,
+                ),
+              );
+            },
+          ),
+        ],
       ),
+      bottomNavigationBar: navbar(pageIndex: 0),
+      body: SingleChildScrollView(),
     );
   }
 }
