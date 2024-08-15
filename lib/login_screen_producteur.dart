@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:tera/forgotten_password_producteur.dart';
+import 'package:tera/functions.dart';
 import 'package:tera/inscription.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -120,12 +122,7 @@ class LoginScreenState extends State<LoginScreen> {
                                   ),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                Inscription()),
-                                      );
+                                      changerPage(context, ForgottenPassword());
                                     },
                                 ),
                               ],
@@ -177,12 +174,7 @@ class LoginScreenState extends State<LoginScreen> {
                                   ),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                Inscription()),
-                                      );
+                                      changerPage(context, Inscription());
                                     },
                                 ),
                               ],

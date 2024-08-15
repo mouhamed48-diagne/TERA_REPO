@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:tera/functions.dart';
 import 'package:tera/login_screen_producteur.dart';
 
 class Inscription extends StatefulWidget {
@@ -233,12 +234,7 @@ class _InscriptionState extends State<Inscription> {
                             ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const LoginScreen()),
-                                );
+                                changerPage(context, LoginScreen());
                               },
                           ),
                         ],
