@@ -13,7 +13,7 @@ class navbar extends StatefulWidget {
 }
 
 class _navbarState extends State<navbar> {
-  List pageList = [entrepots(), Home(), shop()];
+  List pageList = [Entrepots(), Home(), shop()];
 
   void _onSelected(newIndex) {
     if (Navigator.of(context).canPop()) {
