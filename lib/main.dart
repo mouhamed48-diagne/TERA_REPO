@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tera/home.dart';
 import 'package:tera/inscription.dart';
 import 'package:tera/login_screen_producteur.dart';
+import 'package:tera/stock.dart';
 import 'package:tera/voir_plus_legume.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: VoirPlusLegume(),
+      home: Home(),
     );
   }
 }
