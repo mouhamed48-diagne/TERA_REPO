@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tera/ajoutStock.dart';
 
 class AjoutStock extends StatefulWidget {
   const AjoutStock({super.key});
@@ -8,6 +9,15 @@ class AjoutStock extends StatefulWidget {
 }
 
 class _AjoutStockState extends State<AjoutStock> {
+  void showAddStockOverlay(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AddStockOverlay();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,14 +90,28 @@ class _AjoutStockState extends State<AjoutStock> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: const Color.fromRGBO(36, 36, 36, 1)),
-                            width: 78,
+                            width: 100,
                             height: 50,
-                            child: const Center(
-                              child: Text(
-                                "Ajouter",
-                                style: TextStyle(
+                            child: Center(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  showAddStockOverlay(context);
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(0),
+                                  ),
+                                ),
+                                child: Text(
+                                  "Ajouter",
+                                  style: TextStyle(
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
